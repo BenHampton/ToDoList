@@ -2,9 +2,18 @@ import React from 'react';
 
 const Tasks = props => {
     return(
-        <div>
-            {props.task.task}
-        </div>
+        <tr>
+            <td>
+                {props.task.id}
+            </td>
+            <td>
+                {props.task.name}
+            </td>
+            <td>
+                {props.task.task}
+            </td>
+
+        </tr>
     )
 }
 export default Tasks;

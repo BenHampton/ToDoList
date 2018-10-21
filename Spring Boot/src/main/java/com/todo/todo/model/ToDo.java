@@ -11,7 +11,7 @@ public class ToDo {
 
     private String user;
 
-    private String id;
+    private int id;
 
     private Date date;
 }

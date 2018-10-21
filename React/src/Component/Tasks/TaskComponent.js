@@ -28,11 +28,15 @@ class TaskComponent extends Component {
     }
 
     componentDidMount(){
-        //make axios call to backend
+
     }
 
     updateTasks(){
-        console.log('updated tasks')
+        fetch('http://to-do/v1/to-do')
+            .then(response => response.json)
+            .then(data => {
+                console.log(data);
+            })
     }
 
     render() {

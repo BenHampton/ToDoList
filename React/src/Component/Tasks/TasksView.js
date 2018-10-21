@@ -11,7 +11,19 @@ const TaskView = props => {
 
     return(
         <div>
-            {tasks}
+            <table style={{border: 'solid', marginLeft: '45%', marginTop: '5%'}}>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>TASK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {tasks}
+                </tbody>
+            </table>
+            <input type={'button'} value={'Update'} onClick={(e) => props.updateTasks()}/>
         </div>
     )
 
@@ -20,4 +32,4 @@ const TaskView = props => {
 }
 export default TaskView;
 
-//            <input type={'button'} value={'Update'} onClick={(e) => props.updateTasks()}/>
+
