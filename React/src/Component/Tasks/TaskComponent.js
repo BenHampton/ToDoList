@@ -10,20 +10,23 @@ class TaskComponent extends Component {
 
 
     componentDidMount(){
-        fetch('https://todo-spring-boot-react-swagger.herokuapp.com/tasks')
-            .then(response => response.json)
+        fetch('http://todo-spring-boot-react-swagger.herokuapp.com/tasks')
+            .then(response => response.json())
             .then(data => {
-                console.log(data);
+                console.log(JSON.stringify(data));
+                this.setState({tasks: data})
             })
+            .catch(error => console.log(error));
     }
 
     updateTasks(){
-        fetch('https://todo-spring-boot-react-swagger.herokuapp.com/tasks')
-            .then(response => response.json)
+        fetch('http://todo-spring-boot-react-swagger.herokuapp.com/tasks')
+            .then(response => response.json())
             .then(data => {
-                console.log(data);
+                console.log(JSON.stringify(data));
                 this.setState({tasks: data})
             })
+            .catch(error => console.log(error));
     }
 
     render() {
