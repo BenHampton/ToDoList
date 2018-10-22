@@ -3,39 +3,26 @@ import '../../App.css';
 import TaskView from "./TasksView";
 
 class TaskComponent extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-        this.state= {
-                tasks: [{
-                    id: '1',
-                    name: 'Ben',
-                    date: 'today',
-                    task: 'React'
-                },
-                    {
-                        id: '2',
-                        name: 'Jeff',
-                        date: 'Tomorrow',
-                        task: 'Spring Boot'
-                    },
-                    {
-                        id: '3',
-                        name: 'Aamir',
-                        date: 'Yesterday',
-                        task: 'Coding'
-                    }]
-        }
+        this.state = {tasks: []};
     }
+
 
     componentDidMount(){
-
-    }
-
-    updateTasks(){
-        fetch('http://to-do/v1/to-do')
+        fetch('https://todo-spring-boot-react-swagger.herokuapp.com/tasks')
             .then(response => response.json)
             .then(data => {
                 console.log(data);
+            })
+    }
+
+    updateTasks(){
+        fetch('https://todo-spring-boot-react-swagger.herokuapp.com/tasks')
+            .then(response => response.json)
+            .then(data => {
+                console.log(data);
+                this.setState({tasks: data})
             })
     }
 

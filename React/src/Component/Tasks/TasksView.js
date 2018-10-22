@@ -17,6 +17,7 @@ const TaskView = props => {
                         <th>ID</th>
                         <th>NAME</th>
                         <th>TASK</th>
+                        <th>DATE</th>
                     </tr>
                 </thead>
                 <tbody>

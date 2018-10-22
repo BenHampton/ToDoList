@@ -23,7 +23,6 @@ public class ToDoController {
 
     @PostMapping("/tasks")
     public ToDo saveTasks(@RequestBody ToDo t) {
-        log.info("we made it");
         return toDoService.saveTask(t);
     }
 

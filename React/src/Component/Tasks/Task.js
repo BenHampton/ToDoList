@@ -12,6 +12,9 @@ const Tasks = props => {
             <td>
                 {props.task.task}
             </td>
+            <td>
+                {props.task.date}
+            </td>
 
         </tr>
     )
